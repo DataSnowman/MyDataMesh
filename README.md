@@ -29,7 +29,7 @@ This [GitHub Repo](https://github.com/DataSnowman/MyDataMesh) along with an Azur
 
 | Deployment | Use Case Name | Use Case Type | Dataset | Description | Code | Instruction Steps |
 | :------------- | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| [Azure Data Factory, Azure Databricks, Azure SQL Database, and ADLS](https://github.com/DataSnowman/MyDataMesh#deploy-azure-data-factory-azure-databricks-adls-and-azure-sql-database) | Change Data Capture | Azure Data Factory, Azure Databricks, Azure Data Lake Storage, Azure SQL Database | AdventureworksLT | Change Data Capture using ADF and Databricks Autoloader | [Code](https://github.com/Azure/Azure-DataFactory/tree/main/SamplesV2/ChangeDataCapture/usecases/cdc/code) | [Steps](https://github.com/Azure/Azure-DataFactory/tree/main/SamplesV2/ChangeDataCapture/usecases/cdc/steps/usecasesteps.md) |
+| [Azure Data Factory, Azure Databricks, Azure SQL Database, and ADLS](https://github.com/DataSnowman/MyDataMesh#deploy-azure-data-factory-azure-databricks-adls-and-azure-sql-database) | Change Data Capture | Azure Data Factory, Azure Databricks, Azure Data Lake Storage, Azure SQL Database | AdventureworksLT | Change Data Capture using ADF and Databricks Autoloader | [Code](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/cdc/code) | [Steps](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/cdc/steps/usecasesteps.md) |
 
 ### Prerequisites
 
@@ -39,7 +39,7 @@ This [GitHub Repo](https://github.com/DataSnowman/MyDataMesh) along with an Azur
 
 `Together with Azure Data Factory, Azure Databricks, Azure Data Lake Storage Gen2, and Azure SQL Database`
 
-[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-DataFactory%2Fmain%2FSamplesV2%2FChangeDataCapture%2Fworkspace%2Fadb-workspace%2Fazuredeploy.json) [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-DataFactory%2Fmain%2FSamplesV2%2FChangeDataCapture%2Fworkspace%2Fadb-workspace%2Fazuredeploy.json)
+[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FDataSnowman%2FMyDataMesh%2Fmain%2Fworkspace%2Fadb-workspace%2Fazuredeploy.json) [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FDataSnowman%2FMyDataMesh%2Fmain%2Fworkspace%2Fadb-workspace%2Fazuredeploy.json)
 
 This template deploys the following:
 
@@ -50,7 +50,7 @@ This template deploys the following:
 
 ## Post Deployment Steps
 
-One you have complete the deployment please go to [Next Steps](https://github.com/Azure/Azure-DataFactory/tree/main/SamplesV2/ChangeDataCapture/usecases/cdc/steps/usecasesteps.md) to configure and run the Change Data Capture of changes made to the Azure SQL Database which ADF copies and Azure Databricks autoloads.
+One you have complete the deployment please go to [Next Steps](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/cdc/steps/usecasesteps.md) to configure and run the Change Data Capture of changes made to the Azure SQL Database which ADF copies and Azure Databricks autoloads.
 
 ## Training Resources
 Borrowed this table from [OpenEduAnalytics](https://github.com/DataSnowman/OpenEduAnalytics/tree/main#readme)
