@@ -1,6 +1,14 @@
 # MyDataMesh
 This is an example of a Data Mesh Architecture deployed using Azure Analytics ARM Accelerators along with use cases to create a Data Product for a given Data Domain.  To deploy additional Data Domains and create additional Data Products use the Deploy to Azure ARM templates to deploy into other Azure Regions or Resource Groups.
 
+`Note at the time that this was first created (03/10/2022) the Purview Storage Access Policy was only available in the following Azure Regions (so you might want to use one of these for all the deployments)`
+- France Central
+- Canada Central
+- East US2
+- West EuropeCanada
+
+[Check here to see if more regions are available](https://docs.microsoft.com/en-us/azure/purview/tutorial-data-owner-policies-storage)
+
 ![datamesh](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/datamesh.png)
 
 ## Azure Analytics ARM Accelerators
@@ -48,6 +56,11 @@ This template deploys the following:
 - Azure Data Lake Storage Gen2
 - Azure SQL Database
 
+The deployed services should look something like this:
+`Note the Event Grid and Key vault services are added during the Next Steps below`
+
+![landstagedeployment](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/landstagedeployment.png)
+
 ### Post Deployment Steps for Step 1
 
 One you have complete the deployment please go to [Next Steps](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/cdc/steps/usecasesteps.md) to configure and run the Change Data Capture of changes made to the Azure SQL Database which ADF copies and Azure Databricks autoloads.
@@ -80,11 +93,19 @@ This template deploys the following:
 - Both Logic App managed identities are given Contributor rights to the Resource Group
 - Grants the Workspace identity CONTROL to all SQL pools and SQL on-demand pool
 
+The deployed services should look something like this:
+
+![enrichcuratedeployment](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/enrichcuratedeployment.png)
+
 ### Post Deployment - Important steps required to use this Analytics Accelerator
+
+### Post Deployment Steps for Step 2
 
 ```***Remember to come back to this link above after the deployment has completed***```
 
 [Synapse Analytics Post Deployment](https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/enrichcurate/steps/postdeploy.md#post-deployment-steps)
+
+One you have complete the deployment please go to [Next Steps](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/enrichcurate/steps/usecasesteps.md) to configure Linked Services and run Spark Notebooks and SQL Scripts.
 
 ## Training Resources
 Borrowed this table from [OpenEduAnalytics](https://github.com/DataSnowman/OpenEduAnalytics/tree/main#readme)
