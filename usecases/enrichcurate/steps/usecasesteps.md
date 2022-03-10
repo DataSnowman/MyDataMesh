@@ -1,14 +1,50 @@
-## Seattle Public Library CSV files
+## Access to CSV, Parquet, and Delta using Synapse
 
-### [Step 1 Setup Managed Private Endpoint](https://github.com/DataSnowman/analytics-accelerator/blob/main/usecases/spl/steps/postdeploy.md#step-1-setup-managed-private-endpoint)
+Open up your Synapse workspace by clicking on the service in the Resource Group
 
-### [Step 2 - Assign your user to Storage Blob Data Contributor role](https://github.com/DataSnowman/analytics-accelerator/blob/main/usecases/spl/steps/postdeploy.md#step-2-Assign-your-user-to-storage-blob-data-contributor-role)
+![enrichcuratedeployment](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/enrichcuratedeployment.png)
+
+Click on Open Synapse Studio
+
+![opensynapsestudio](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/opensynapsestudio.png)
+
+Click on Manage on the left navigation pane (icon that looks like a suitcase) and select Linked services
+
+![linkedservices](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/linkedservices.png)
+
+Click on +New and select Azure Data Lake Storage Gen2
+
+![adlsg2](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/adlsg2.png)
+
+Click Continue and enter a Name, choose Azure Subscription, and the Storage account name you created in Step 1 deployment.
+
+![newlinkedservice](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/newlinkedservice.png)
+
+You will need to click on the pencil icon on hte Connect via integration runtime to enable Interactive authoring to Test the Connection
+
+![integrationruntime](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/integrationruntime.png)
+
+Enable Interactive authoring and click Apply
+
+Click Test connection and Create
+
+![createlinkedservice](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/createlinkedservice.png)
+
+The linked service should look like this:
+
+![adlslinkedservices](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/adlslinkedservices.png)
+
+Navigate to the Data hub and select Linked (you might need to refresh to see the ADLS account you just created the Linked Service for).  and then you can navigate to the files that were landed and staged in Step 1
+
+![adlslinkeddata](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/adlslinkeddata.png)
+
+
+### [Step 1 Setup Managed Private Endpoint](https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/enrichcurate/steps/postdeploy.md#step-1-setup-managed-private-endpoint)
+
+### [Step 2 - Assign your user to Storage Blob Data Contributor role](https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/enrichcurate/steps/postdeploy.md#step-2-Assign-your-user-to-storage-blob-data-contributor-role)
 
 ### Step 3 Create a folder in the capture container and download/copy files
 
-`Note - You don't need to copy them all.  Maybe Checkouts_by_Title.csv which is 7.7 GB should be your choice to try this out.  Also pick the option that works best for you.`
-
-Create a folder called `SeattlePublicLibrary` in the capture container on the storage account created in the deployment
 
 ![Step 3a](https://raw.githubusercontent.com/DataSnowman/analytics-accelerator/main/images/3a.png)
 
