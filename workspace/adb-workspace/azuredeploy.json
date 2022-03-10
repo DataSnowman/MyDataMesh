@@ -93,7 +93,7 @@
             }
           },
           {
-            "name": "[concat('default/', 'bronze')]",
+            "name": "[concat('default/', 'landingzone')]",
             "type": "blobServices/containers",
             "apiVersion": "2019-06-01",
             "dependsOn": [
@@ -104,7 +104,7 @@
             }
           },
           {
-            "name": "[concat('default/', 'silver')]",
+            "name": "[concat('default/', 'stagingzone')]",
             "type": "blobServices/containers",
             "apiVersion": "2019-06-01",
             "dependsOn": [
@@ -115,7 +115,7 @@
             }
           },
           {
-            "name": "[concat('default/', 'gold')]",
+            "name": "[concat('default/', 'commonzone')]",
             "type": "blobServices/containers",
             "apiVersion": "2019-06-01",
             "dependsOn": [
