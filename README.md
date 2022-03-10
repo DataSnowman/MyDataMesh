@@ -5,13 +5,9 @@ This is an example of a Data Mesh Architecture deployed using Azure Analytics AR
 
 ## Azure Analytics ARM Accelerators
 
-### Step 1 - Deploy Azure Analytic Services to land, stage, and enrich data
-
-The following accelerator can be used to deploy `Azure Data Factory`, `Azure Databricks`, `Azure Data Lake Storage`, and `Azure SQL Database` into an Azure Resource Group.  It will allow you to explore some of the Data Integration, Data Lake, and Lakehouse Architecture capabilities available on Microsoft Azure.  
-
 ### Purpose
 
-The purpose of this Analytics Accelerator is to help you learn and grow through Hands-on common use cases that show you how to use things like ADF pipelines, Databricks notebooks, and SQL scripts.
+The purpose of this Analytics Accelerator is to help you learn and grow through Hands-on common use cases that show you how to use Azure Data Services like ADF pipelines, Azure Data Lake Storage, Databricks Notebooks, SQL scripts, Synapse pipelines, Synapse Spark Notebooks, Synapse Serverless SQL, Purview, and Power BI.
 
 This [GitHub Repo](https://github.com/DataSnowman/MyDataMesh) along with an Azure Subscription [No Azure Subscription click here](https://azure.microsoft.com/en-us/free/) should allow you to accelerate:
 
@@ -35,6 +31,10 @@ This [GitHub Repo](https://github.com/DataSnowman/MyDataMesh) along with an Azur
 
 - Owner to the Azure Subscription being deployed. This is for creation of a separate Analytics Accelerator Resource Group and to delegate roles necessary for this deployment.
 
+### Step 1 - Deploy Azure Analytic Services to land, stage data
+
+The following accelerator can be used to deploy `Azure Data Factory`, `Azure Databricks`, `Azure Data Lake Storage`, and `Azure SQL Database` into an Azure Resource Group.  It will allow you to explore some of the Data Integration, Data Lake, and Lakehouse Architecture capabilities available on Microsoft Azure.  
+
 ### Deploy Azure Data Factory, Azure Databricks, ADLS, and Azure SQL Database
 
 `Together with Azure Data Factory, Azure Databricks, Azure Data Lake Storage Gen2, and Azure SQL Database`
@@ -48,9 +48,43 @@ This template deploys the following:
 - Azure Data Lake Storage Gen2
 - Azure SQL Database
 
-## Post Deployment Steps
+### Post Deployment Steps for Step 1
 
 One you have complete the deployment please go to [Next Steps](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/cdc/steps/usecasesteps.md) to configure and run the Change Data Capture of changes made to the Azure SQL Database which ADF copies and Azure Databricks autoloads.
+
+### Step 2 - Deploy Azure Synapse Analytics to enrich and curate data
+
+The following accelerator can be used to deploy `Azure Synapse Analytics`, `Azure Data Lake Storage`, `Spark Pools`, `SQL Serverless`and `Dedicated SQL Pools` into an Azure Resource Group.  It will allow you to enrich and curate data that was landed and staged in Step 1 above.  This will continue your emersion into Data Integration, Data Lake, Lakehouse, and using Spark Notebooks and SQL Serverless.  
+
+### Deploy an Azure Synapse Analytics Workspace
+
+This template deploys necessary resources to run an Azure Synapse Analytics Workspace.
+
+[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FDataSnowman%2FMyDataMesh%2Fmain%2Fworkspace%2Fsynapse-workspace%2Fazuredeploy.json) [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FDataSnowman%2FMyDataMesh%2Fmain%2Fworkspace%2Fsynapse-workspace%2Fazuredeploy.json)
+
+This template deploys the following:
+
+- An Azure Synapse Workspace
+  - (OPTIONAL) Allows All connections in by default (Firewall IP Addresses)
+  - Allows Azure Services to access the workspace by default
+  - Managed Virtual Network is Enabled
+- An Azure Synapse SQL Pool
+- (OPTIONAL) Apache Spark Pool
+  - Auto-paused set to 15 minutes of idling
+- Azure Data Lake Storage Gen2 account
+  - Azure Synapse Workspace identity given Storage Blob Data Contributor to the Storage Account
+    - A new File System inside the Storage Account to be used by Azure Synapse
+- A Logic App to Pause the SQL Pool at defined schedule
+  - The Logic App will check for Active Queries. If there are active queries, it will wait 5 minutes and check again until there are none before pausing
+- A Logic App to Resume the SQL Pool at defined schedule
+- Both Logic App managed identities are given Contributor rights to the Resource Group
+- Grants the Workspace identity CONTROL to all SQL pools and SQL on-demand pool
+
+### Post Deployment - Important steps required to use this Analytics Accelerator
+
+```***Remember to come back to this link above after the deployment has completed***```
+
+[Synapse Analytics Post Deployment](https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/enrichcurate/steps/postdeploy.md#post-deployment-steps)
 
 ## Training Resources
 Borrowed this table from [OpenEduAnalytics](https://github.com/DataSnowman/OpenEduAnalytics/tree/main#readme)
