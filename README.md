@@ -1,11 +1,11 @@
 # MyDataMesh
-This is an example of a Data Mesh Architecture deployed using Azure Analytics ARM Accelerators and use cases to create a Data Product for a given Data Domain.  To deploy additional Data Domains and create additional Data Products use the Deploy to Azure ARM template to deploy into other Azure regions or Resource Groups.
+This is an example of a Data Mesh Architecture deployed using Azure Analytics ARM Accelerators along with use cases to create a Data Product for a given Data Domain.  To deploy additional Data Domains and create additional Data Products use the Deploy to Azure ARM templates to deploy into other Azure Regions or Resource Groups.
 
 ![datamesh](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/datamesh.png)
 
 ## Azure Analytics ARM Accelerators
 
-## Step 1 - Deploy Azure Analytic Services to land, stage, and enrich data
+### Step 1 - Deploy Azure Analytic Services to land, stage, and enrich data
 
 The following accelerator can be used to deploy `Azure Data Factory`, `Azure Databricks`, `Azure Data Lake Storage`, and `Azure SQL Database` into an Azure Resource Group.  It will allow you to explore some of the Data Integration, Data Lake, and Lakehouse Architecture capabilities available on Microsoft Azure.  
 
