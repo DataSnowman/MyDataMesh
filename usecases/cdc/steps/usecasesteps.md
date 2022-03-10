@@ -34,23 +34,15 @@ It should look like this
 
 ![adftemplateUserinputs](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/adftemplateUserinputs.png)
 
-Select +New in the first User input and create an Azure SQL Database Linked Service to the database deployed by the ARM template.
-
-![adfDatabaseLinkedService](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/adfDatabaseLinkedService.png)
-
-Select +New in the second User input and create an Azure Data Lake Storage Gen2 Linked Service 
+Select +New in the first User input and create an Azure Data Lake Storage Gen2 Linked Service to the database deployed by the ARM template.
 
 ![adfAdlsLinkedService](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/adfAdlsLinkedService.png)
 
+Select +New in the second User input and create an Azure SQL Database Linked Service 
+
+![adfDatabaseLinkedService](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/adfDatabaseLinkedService.png)
+
 For Input 3 select the same Database you chose in Input 1 
-
-For Input 4 select the same Database you chose in Input 1
-
-For Input 5 select the same Storage input you chose in Input 2
-
-For Input 6 select the same Database you chose in Input 1 
-
-For Input 7 select the same Database you chose in Input 1
 
 Then click on Use this template
 
@@ -71,7 +63,7 @@ Once the pipeline runs successfully it should look like this
 
 ![adfSuccessfulRun](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/adfSuccessfulRun.png)
 
-Check that the files have been created in Storage using [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) or the Azure Portal in the browser.  The files should be in bronze container at a path like `CDC/Sales/Microsoft/AdventureWorksLT/SalesLT/Address/`
+Check that the files have been created in Storage using [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/) or the Azure Portal in the browser.  The files should be in landingzone container at a path like `CDC/Sales/Microsoft/AdventureWorksLT/SalesLT/Address/`
 
 ![adfFileInStorage](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/adfFileInStorage.png)
 
