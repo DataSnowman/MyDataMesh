@@ -106,7 +106,7 @@ You should now have a notebook that looks like this:
 
 ![adbnotebook](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/adbnotebook.png)
 
-Change the value of the adlsAccountName = "<EnterStorageAccountNameHere>" in cell one to the ADLS AccountName of in your deployment
+Change the value of the adlsAccountName = "`<EnterStorageAccountNameHere>`" in cell one to the ADLS AccountName of in your deployment
 
 In my chase my deployment has a Storage account name of `adfacceler7kdgtkhj5mpoa` so the first row of the cell would read:
 
