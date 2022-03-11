@@ -39,7 +39,9 @@ This [GitHub Repo](https://github.com/DataSnowman/MyDataMesh) along with an Azur
 
 - Owner to the Azure Subscription being deployed. This is for creation of a separate Analytics Accelerator Resource Group and to delegate roles necessary for this deployment.
 
-### Step 1 - Deploy Azure Analytic Services to land, stage data
+### Step 1 - Deploy Azure Analytic Services to land and stage data
+
+![landstagestep](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/landstagestep.png)
 
 The following accelerator can be used to deploy `Azure Data Factory`, `Azure Databricks`, `Azure Data Lake Storage`, and `Azure SQL Database` into an Azure Resource Group.  It will allow you to explore some of the Data Integration, Data Lake, and Lakehouse Architecture capabilities available on Microsoft Azure.  
 
@@ -63,9 +65,11 @@ The deployed services should look something like this:
 
 ### Post Deployment Steps for Step 1
 
-One you have complete the deployment please go to [Next Steps](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/landstage/steps/usecasesteps.md) to configure and run the Change Data Capture of changes made to the Azure SQL Database which ADF copies and Azure Databricks autoloads.
+Once you have complete the deployment please go to [Next Steps](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/landstage/steps/usecasesteps.md) to configure and run the Change Data Capture of changes made to the Azure SQL Database which ADF copies and Azure Databricks autoloads.
 
 ### Step 2 - Deploy Azure Synapse Analytics to enrich and curate data
+
+![enrichcuratestep](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/enrichcuratestep.png)
 
 The following accelerator can be used to deploy `Azure Synapse Analytics`, `Azure Data Lake Storage`, `Spark Pools`, `SQL Serverless`and `Dedicated SQL Pools` into an Azure Resource Group.  It will allow you to enrich and curate data that was landed and staged in Step 1 above.  This will continue your emersion into Data Integration, Data Lake, Lakehouse, and using Spark Notebooks and SQL Serverless.  
 
@@ -105,7 +109,28 @@ The deployed services should look something like this:
 
 [Synapse Analytics Post Deployment](https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/enrichcurate/steps/postdeploy.md#post-deployment-steps)
 
-One you have complete the deployment please go to [Next Steps](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/enrichcurate/steps/usecasesteps.md) to configure Linked Services and run Spark Notebooks and SQL Scripts.
+Once you have complete the deployment please go to [Next Steps](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/enrichcurate/steps/usecasesteps.md) to configure Linked Services and run Spark Notebooks and SQL Scripts.
+
+### Step 3 - Deploy Azure Purview to secure and govern data used in Synapse Studio, Azure Data Studio, and Power BI
+
+![datagovbistep](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/datagovbistep.png)
+
+The following accelerator can be used to deploy `Azure Purview`, and `Azure Key vault` into an Azure Resource Group.  It will allow you to secure and govern data that was landed, staged, enriched, and curated in Step 1 and 2 above.  This will continue your emersion into Data Governance and securing Lakehouse data used in Synapse Studio, Azure Data Studio, and Power BI.
+
+[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FDataSnowman%2FDataMesh%2Fmain%2Fworkspace%2FpurviewAccount%2Fazuredeploy.json) [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FDataSnowman%2FDataMesh%2Fmain%2Fworkspace%2FpurviewAccount%2Fazuredeploy.json)
+
+This template deploys the following:
+
+- Azure Purview
+- Azure Key Vault
+
+The deployed services should look something like this:
+
+![datagovdeployment](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/datagovdeployment.png)
+
+### Post Deployment Steps for Step 3
+
+Once you have complete the deployment please go to [Next Steps](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/datagov/steps/usecasesteps.md) to configure Linked Services and run Spark Notebooks and SQL Scripts.
 
 ## Training Resources
 Borrowed this table from [OpenEduAnalytics](https://github.com/DataSnowman/OpenEduAnalytics/tree/main#readme)
