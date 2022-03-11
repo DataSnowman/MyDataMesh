@@ -117,7 +117,7 @@ Once you have complete the deployment please go to [Next Steps](https://github.c
 
 The following accelerator can be used to deploy `Azure Purview`, and `Azure Key vault` into an Azure Resource Group.  It will allow you to secure and govern data that was landed, staged, enriched, and curated in Step 1 and 2 above.  This will continue your emersion into Data Governance and securing Lakehouse data used in Synapse Studio, Azure Data Studio, and Power BI.
 
-[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FDataSnowman%2FDataMesh%2Fmain%2Fworkspace%2FpurviewAccount%2Fazuredeploy.json) [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FDataSnowman%2FDataMesh%2Fmain%2Fworkspace%2FpurviewAccount%2Fazuredeploy.json)
+[![Deploy To Azure](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FDataSnowman%2FMyDataMesh%2Fmain%2Fworkspace%2FpurviewAccount%2Fazuredeploy.json) [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FDataSnowman%2FMyDataMesh%2Fmain%2Fworkspace%2FpurviewAccount%2Fazuredeploy.json)
 
 This template deploys the following:
 
