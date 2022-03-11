@@ -33,7 +33,7 @@ This [GitHub Repo](https://github.com/DataSnowman/MyDataMesh) along with an Azur
 
 | Deployment | Use Case Name | Use Case Type | Dataset | Description | Code | Instruction Steps |
 | :------------- | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| [Azure Data Factory, Azure Databricks, Azure SQL Database, and ADLS](https://github.com/DataSnowman/MyDataMesh#deploy-azure-data-factory-azure-databricks-adls-and-azure-sql-database) | Change Data Capture | Azure Data Factory, Azure Databricks, Azure Data Lake Storage, Azure SQL Database | AdventureworksLT | Change Data Capture using ADF and Databricks Autoloader | [Code](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/cdc/code) | [Steps](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/cdc/steps/usecasesteps.md) |
+| [Azure Data Factory, Azure Databricks, Azure SQL Database, and ADLS](https://github.com/DataSnowman/MyDataMesh#deploy-azure-data-factory-azure-databricks-adls-and-azure-sql-database) | Change Data Capture | Azure Data Factory, Azure Databricks, Azure Data Lake Storage, Azure SQL Database | AdventureworksLT | Change Data Capture using ADF and Databricks Autoloader | [Code](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/landstage/code) | [Steps](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/landstage/steps/usecasesteps.md) |
 
 ### Prerequisites
 
@@ -63,7 +63,7 @@ The deployed services should look something like this:
 
 ### Post Deployment Steps for Step 1
 
-One you have complete the deployment please go to [Next Steps](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/cdc/steps/usecasesteps.md) to configure and run the Change Data Capture of changes made to the Azure SQL Database which ADF copies and Azure Databricks autoloads.
+One you have complete the deployment please go to [Next Steps](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/landstage/steps/usecasesteps.md) to configure and run the Change Data Capture of changes made to the Azure SQL Database which ADF copies and Azure Databricks autoloads.
 
 ### Step 2 - Deploy Azure Synapse Analytics to enrich and curate data
 

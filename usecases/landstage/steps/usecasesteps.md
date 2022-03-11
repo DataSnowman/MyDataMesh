@@ -4,21 +4,21 @@
 
 You can create the tables by connecting to the Azure SQL Database deployed by the ARM template using a tool like [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15)
 
-Use the following SQL script [ControlTableForSourceToSink.sql](https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/cdc/code/sqlscripts/ControlTableForSourceToSink.sql) to create the ControlTableForSourceToSink table in the database deployed by the ARM template.
+Use the following SQL script [ControlTableForSourceToSink.sql](https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/landstage/code/sqlscripts/ControlTableForSourceToSink.sql) to create the ControlTableForSourceToSink table in the database deployed by the ARM template.
 
 ![Step 1 table](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/cdcstep1table.png)
 
-Use the following SQL script [spUpdateWatermark.sql](https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/cdc/code/sqlscripts/spUpdateWatermark.sql) to create the spUpdateWatermark stored procedure in the database deployed by the ARM template.
+Use the following SQL script [spUpdateWatermark.sql](https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/landstage/code/sqlscripts/spUpdateWatermark.sql) to create the spUpdateWatermark stored procedure in the database deployed by the ARM template.
 
 ![Step 1 sproc](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/cdcstep1sproc.png)
 
-Use the following SQL script [CreateStudent.sql](https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/cdc/code/sqlscripts/CreateStudent.sql) to create the studentMath table in the database deployed by the ARM template.
+Use the following SQL script [CreateStudent.sql](https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/landstage/code/sqlscripts/CreateStudent.sql) to create the studentMath table in the database deployed by the ARM template.
 
 ![Step 1 student](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/cdcstep1student.png)
 
 ## Step 2 Create Azure Data Factory Pipeline from local Template
 
-Download [ADF Template zip](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/cdc/code/adfTemplates) or find it in your cloned GitHub Repo.
+Download [ADF Template zip](https://github.com/DataSnowman/MyDataMesh/tree/main/usecases/landstage/code/adfTemplates) or find it in your cloned GitHub Repo.
 
 ![adftemplatezip](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/adftemplatezip.png)
 
@@ -98,7 +98,7 @@ Open up you Databricks workspace and navigate to your user, select the dropdown 
 
 ![adbworkspace](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/adbworkspace.png)
 
-Import from file if you cloned the repo locally or enter the URL `https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/cdc/code/notebooks/autoloadersp.ipynb` to the Notebook in GitHub Repo [autoloadersp.ipynb](https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/cdc/code/notebooks/autoloadersp.ipynb) and click Import
+Import from file if you cloned the repo locally or enter the URL `https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/landstage/code/notebooks/autoloadersp.ipynb` to the Notebook in GitHub Repo [autoloadersp.ipynb](https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/landstage/code/notebooks/autoloadersp.ipynb) and click Import
 
 ![adbnotebookimport](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/adbnotebookimport.png)
 
@@ -376,7 +376,7 @@ INSERT INTO [SalesLT].[Address]
 		('138th Drive', NULL, 'Everett', 'WA', 'USA', '98208')
 ```
 
-You can cut and paste or use the following SQL script [InsertAddress.sql](https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/cdc/code/sqlscripts/InsertAddress.sql) 
+You can cut and paste or use the following SQL script [InsertAddress.sql](https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/landstage/code/sqlscripts/InsertAddress.sql) 
 
 Rerun the ADF Pipeline
 
