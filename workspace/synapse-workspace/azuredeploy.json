@@ -377,7 +377,7 @@
             }
           },
           {
-            "name": "[concat('default/', 'capture')]",
+            "name": "[concat('default/', 'landingzone')]",
             "type": "blobServices/containers",
             "apiVersion": "2019-06-01",
             "dependsOn": [
@@ -388,7 +388,7 @@
             }
           },
           {
-            "name": "[concat('default/', 'compose')]",
+            "name": "[concat('default/', 'stagingzone')]",
             "type": "blobServices/containers",
             "apiVersion": "2019-06-01",
             "dependsOn": [
@@ -399,7 +399,7 @@
             }
           },
           {
-            "name": "[concat('default/', 'comsume')]",
+            "name": "[concat('default/', 'commonzone')]",
             "type": "blobServices/containers",
             "apiVersion": "2019-06-01",
             "dependsOn": [
