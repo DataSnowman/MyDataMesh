@@ -121,3 +121,35 @@ To get started do the following:
 ![credential](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/credential.png)
 
 This is the Credential you will use to setup the scan
+
+#### Setup a Scan
+
+1. Go back to the ADLSGen2 Data source in the Map view
+
+![mapview](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/mapview.png)
+
+2. Click on the New scan icon between the pencil and trash can on the Data source
+
+3. Go with the default scan Name, select the Credential you just created.  Test connection. If the Connection is successful, Click Continue.
+
+![scan](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/scan.png)
+
+4. Choose the Scope of the scan. Click Continue
+
+![scope](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/scope.png)
+
+5. Select the System Default scan rule set. Click Continue
+
+![scanruleset](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/scanruleset.png)
+
+6. Select the Once scan trigger. Click Continue
+
+![scantrigger](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/scantrigger.png)
+
+7. Review your scan. Click Save and run
+
+![saveandrun](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/saveandrun.png)
+
+8. Ran an Full scan
+
+![fullscan](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/fullscan.png)
