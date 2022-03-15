@@ -153,3 +153,10 @@ This is the Credential you will use to setup the scan
 8. Ran an Full scan
 
 ![fullscan](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/fullscan.png)
+
+9. When the scan completes it should look like this:
+
+![scancomplete](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/scancomplete.png)
+
+#### Create a new Data policy
+
