@@ -30,6 +30,6 @@ FROM
 	         [CountryRegion] [nvarchar](60),
 	         [PostalCode] [nvarchar](15),
 	         [rowguid] [nvarchar](40),
-	         [ModifiedDate] [datetime]
+	         [ModifiedDate] [nvarchar](30)
            ) as rows
 GO
