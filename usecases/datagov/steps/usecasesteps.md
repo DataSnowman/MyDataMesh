@@ -160,3 +160,29 @@ This is the Credential you will use to setup the scan
 
 #### Create a new Data policy
 
+1. In Purview Studio click on Data Policy on the left panel
+
+![datapolicy](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/datapolicy.png)
+
+2. Click on + New Policy.  Give the Policy a Name, Description, and click on New policy statement.  Select Allow, Read, and select the ADLS Gen2 Data source type, and the Asset Data source type, and Name of the Data Source.  Click Continue.
+
+![newpolicystatement](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/newpolicystatement.png)
+
+3. Select the data source and make sure the Recursive checkbox is selected.  Click Add
+
+![selectds](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/selectds.png)
+
+4. Select the Subject and select a user of Security Group.  In my case I have created a security group called "access-read-stage" and have added users into this group the I want to have read access to the data in the stagingzone container.  Click OK
+
+![selectsubject](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/selectsubject.png)
+
+5. Review the Policy and click Save
+
+![savepolicy](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/savepolicy.png)
+
+6. The new policy will show up in the Data policies grid
+
+![publishedpolicy](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/publishedpolicy.png)
+
+7. You can now test the policy in tools like Synapse Studio, Azure Data Studio, or Power BI.  The next section will setup a Synapse Serverless view in Synapse Studio that can be accessed in Azure Data Studio, or Power BI.
+
