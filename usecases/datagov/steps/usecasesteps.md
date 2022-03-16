@@ -237,7 +237,7 @@ This is the Credential you will use to setup the scan
 
 ![queryresults](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/queryresults.png)
 
-Note I will fix this issue and replace the Query Results image
+#### Note I will fix this issue and replace the Query Results image
 
 Right now the only way I can fix this is by adding the Security group that the use belongs to to the Storage Blob Data Contributor or using ACLS as defined [here](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/resources-self-help-sql-on-demand#query-fails-because-file-cannot-be-opened)
 
