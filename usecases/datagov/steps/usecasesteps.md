@@ -186,3 +186,43 @@ This is the Credential you will use to setup the scan
 
 7. You can now test the policy in tools like Synapse Studio, Azure Data Studio, or Power BI.  The next section will setup a Synapse Serverless view in Synapse Studio that can be accessed in Azure Data Studio, or Power BI.
 
+#### Create a Linked Service in Azure Synapse
+
+1. In Synapse Studio click on Manage on the left panel and select Linked services under External connections
+
+![linkedservices](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/linkedservices.png)
+
+2. To connect to the data we just scanned and created a data policy for you need a new Linked service to the ADLS Storage account.  Click on + New in Linked services. Select Azure Data Lake Storage Gen2 and click Continue.
+
+![adlslinkedservice](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/adlslinkedservice.png)
+
+3. Enter a Name, Authentication method of Account key, select your Azure subscription, and select the Storage account name.  Test connection (note that you might need to enable Interactive authoring to test the connection).  Click Create.
+
+![newadlslinkedservice](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/newadlslinkedservice.png)
+
+4. The new Linked service will now showup on the list
+
+![linkedservicelist](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/linkedservicelist.png)
+
+5. Navigate to the Data hub on the left navigation bar in Synapse Studio.  Click on the Linked tab and navigate to 
+`stagingzone/CDC/Sales/Microsoft/AdventureWorksLT/SalesLT/Address/AutoLoader/data`
+
+![datapath](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/datapath.png)
+
+#### Create Synapse Serverless Delta Views and Grant Access
+
+1. In Synapse Studio click on Develop on the left panel and select + SQL Script
+
+![sqlscript](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/sqlscript.png)
+
+2. Download, Copy, and Modify (if needed) this SQL Script [CreateDatabaseAndServerlessDeltaView]() and run in Synapse Studio
+
+![sqlscriptcreatedb](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/sqlscriptcreatedb.png)
+
+3. Download, Copy, and Modify (if needed) this SQL Script [CreateLoginGrantBulkOpsCreateUserGrantSelectOnSchema]() and run in Synapse Studio
+
+![sqlscriptcreatelogin](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/sqlscriptcreatelogin.png)
+
+#### Access the Serverless Delta Views in Azure Data Studio
+
+#### Access the Serverless Delta Views in Power BI
