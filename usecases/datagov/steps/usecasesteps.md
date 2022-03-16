@@ -225,4 +225,18 @@ This is the Credential you will use to setup the scan
 
 #### Access the Serverless Delta Views in Azure Data Studio
 
+1. Go and get the Synapse Serverless endpoint in the Azure Portal
+
+![serverlessendpoint](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/serverlessendpoint.png)
+
+2. In Azure Data Studio have the user(s) you created and granted access try to connect to the Synapse Serverless Database.  Users will need the Serverless SQL endpoint and the database name (In my case it was stagingzone) to connect 
+
+![connectiondetails](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/connectiondetails.png)
+
+3. Here is the query in Azure Data Studio
+
+![queryresults](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/queryresults.png)
+
+Note I will fix this issue and replace the Query Results image
+
 #### Access the Serverless Delta Views in Power BI
