@@ -215,11 +215,11 @@ This is the Credential you will use to setup the scan
 
 ![sqlscript](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/sqlscript.png)
 
-2. Download, Copy, and Modify (if needed) this SQL Script [CreateDatabaseAndServerlessDeltaView]() and run in Synapse Studio
+2. Download, Copy, and Modify (if needed) this SQL Script [CreateDatabaseAndServerlessDeltaView](https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/datagov/code/sqlscripts/CreateDatabaseAndServerlessDeltaView.sql) and run in Synapse Studio
 
 ![sqlscriptcreatedb](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/sqlscriptcreatedb.png)
 
-3. Download, Copy, and Modify (if needed) this SQL Script [CreateLoginGrantBulkOpsCreateUserGrantSelectOnSchema]() and run in Synapse Studio
+3. Download, Copy, and Modify (if needed) this SQL Script [CreateLoginGrantBulkOpsCreateUserGrantSelectOnSchema](https://github.com/DataSnowman/MyDataMesh/blob/main/usecases/datagov/code/sqlscripts/CreateLoginGrantBulkOpsCreateUserGrantSelectOnSchema.sql)and run in Synapse Studio
 
 ![sqlscriptcreatelogin](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/sqlscriptcreatelogin.png)
 
