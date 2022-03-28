@@ -9,6 +9,8 @@ This is an example of a Data Mesh Architecture deployed using Azure Analytics AR
 
 [Check here to see if more regions are available](https://docs.microsoft.com/en-us/azure/purview/tutorial-data-owner-policies-storage)
 
+## Data Mesh
+
 ![datamesh](https://raw.githubusercontent.com/DataSnowman/MyDataMesh/main/images/datamesh.png)
 
 ## Azure Analytics ARM Accelerators
